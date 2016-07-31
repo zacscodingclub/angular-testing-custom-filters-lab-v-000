@@ -7,4 +7,9 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+	it('should remove all vowels in provided word', function() {
+		var results = $filter('removeAllVowels')('word');
+
+		expect(results).toEqual('wrd');
+	});
 });
